@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "SAIEL OMNI APP INFINITO",
   description: "Tu asistente único, vivo y en expansión."
