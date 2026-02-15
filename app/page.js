@@ -69,6 +69,39 @@ export default function Home() {
   );
 }        value={input}
         onChange={(e) => setInput(e.target.value)}
+        style={{
+          width: "100%",
+          height: "120px",
+          marginTop: "20px",
+          padding: "10px"
+        }}
+      />
+
+      <button
+        onClick={sendMessage}
+        style={{
+          marginTop: "15px",
+          padding: "10px 20px"
+        }}
+      >
+        Enviar
+      </button>
+
+      <pre
+        style={{
+          marginTop: "30px",
+          whiteSpace: "pre-wrap",
+          background: "#f3f3f3",
+          padding: "15px",
+          borderRadius: "10px"
+        }}
+      >
+        {loading ? "Respondiendo…" : reply}
+      </pre>
+    </main>
+  );
+}        value={input}
+        onChange={(e) => setInput(e.target.value)}
         placeholder="Escribe aquí…"
         style={{ width: "100%", height: 80, marginTop: 20 }}
       />
