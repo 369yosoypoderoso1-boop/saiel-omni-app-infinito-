@@ -4,11 +4,12 @@ export async function POST(req) {
   try {
     const { message } = await req.json();
 
-    // Aquí va tu LLM, por ahora respondemos algo literal.
-    const reply = "Hola Emilio, SAIEL OMNI ya está online y escuchando.";
-
-    return NextResponse.json({ reply });
+    return NextResponse.json({
+      reply: `SAIEL responde: ${message}`
+    });
   } catch (error) {
-    return NextResponse.json({ reply: "Error en el servidor." });
+    return NextResponse.json({
+      reply: "Error en el servidor."
+    });
   }
 }
